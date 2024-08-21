@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import CommonCard from "./CommonCard";
-import FeedbackCard from "./FeedbackCard";
+import FeedbackCard from "../evaluation/FeedbackCard";
 import ProgressCircle from "./ProgressCircle";
 
 function CardDropdown({ dataItem, criteria }) {
