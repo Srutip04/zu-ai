@@ -206,14 +206,14 @@ function CourseEvaluation() {
       const nanoidd = nanoid();
 
       setShowLoading(true);
-      
+
       setTimeout(() => {
         addCourse({
           ...courseWork,
           id: nanoidd,
           totalScore: 13,
           score: [7, 5, 3],
-          time: `${day} ${montharr[month]} ${year}`
+          time: `${day} ${montharr[month]} ${year}`,
         });
         resetUpload();
         setCourseWork((prevCourseWork) => ({
@@ -222,10 +222,10 @@ function CourseEvaluation() {
           subject: "",
           title: "",
         }));
-        
+
         router.push(`/evaluation/${nanoidd}`);
       }, 3500);
-    } 
+    }
   };
 
   return (

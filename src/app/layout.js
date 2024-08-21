@@ -14,16 +14,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">    
-      <body className={inter.className}>
-        <main className="relative">
-          <Sidebar />
-          <div className="py-20 md:py-16">
-            <Container>{children}
-              <Toaster/>
+    <html lang="en" data-test-id="html-root">
+      <body className={inter.className} data-test-id="body-root">
+        <main className="relative" data-test-id="main-layout">
+          <Sidebar data-test-id="sidebar" />
+          <div className="py-20 md:py-16" data-test-id="content-wrapper">
+            <Container data-test-id="content-container">
+              {children}
+              <Toaster data-test-id="toaster" />
             </Container>
           </div>
-          <InfoBox/>
+          <InfoBox data-test-id="info-box" />
         </main>
       </body>
     </html>

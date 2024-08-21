@@ -2,9 +2,10 @@
 import React from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-function ProgressCircle({ value = 13, classes, pathColor = "#3CC28A" }) {
+
+function ProgressCircle({ value = 13, classes, pathColor = "#3CC28A", testId }) {
   return (
-    <div className={`${classes} font-bold `}>
+    <div className={`${classes} font-bold`} data-test-id={testId}>
       <CircularProgressbar
         value={(value / 20) * 100}
         text={`${value}/20`}

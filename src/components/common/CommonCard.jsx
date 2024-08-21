@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-function CommonCard({children ,classes="mt-4 rounded-3xl bg-[#FFFFFF]"}) {
+function CommonCard({ children, classes = "mt-4 rounded-3xl bg-[#FFFFFF]", testId }) {
   return (
-    <div className={`${classes} p-4  `}>{children}</div>
-  )
+    <div className={`${classes} p-4`} data-test-id={testId}>
+      {children}
+    </div>
+  );
 }
 
-export default CommonCard
+export default CommonCard;
