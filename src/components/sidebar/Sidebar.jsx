@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Sideicons from "./SidebarIcons";
-import Information from "../common/InfoBox";
+import InfoBox from "../common/InfoBox";
 
 function Sidebar() {
   const [sideOpen, setSideOpen] = useState(false);
@@ -43,7 +43,7 @@ function Sidebar() {
               );
             })}
           </div>
-          <Information classs="md:hidden" />
+          <InfoBox classs="md:hidden" />
           <Sideicons
             src={"/sidebaricons/human.svg"}
             alt={"human"}

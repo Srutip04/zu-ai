@@ -8,7 +8,7 @@ import Upload from "./FileUpload";
 import UploadingAnimation from "./UploadAnimation";
 import Error from "./ErrorDisplay";
 
-function EvaluateCourse() {
+function CourseEvaluation() {
   const [fileData, setFileData] = useState("");
   const [showLoading, setShowLoading] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
@@ -350,4 +350,4 @@ function EvaluateCourse() {
   );
 }
 
-export default EvaluateCourse;
+export default CourseEvaluation;

@@ -2,7 +2,7 @@ import { Montserrat } from "next/font/google";
 import "./global.css";
 import Sidebar from "@/components/sidebar/Sidebar";
 import Container from "@/components/common/Container";
-import Information from "@/components/common/InfoBox";
+import InfoBox from "@/components/common/InfoBox";
 import { Toaster } from "@/components/ui/Toaster";
 
 const inter = Montserrat({ subsets: ["latin"] });
@@ -14,8 +14,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-     
+    <html lang="en">    
       <body className={inter.className}>
         <main className="relative">
           <Sidebar />
@@ -24,7 +23,7 @@ export default function RootLayout({ children }) {
               <Toaster/>
             </Container>
           </div>
-          <Information/>
+          <InfoBox/>
         </main>
       </body>
     </html>

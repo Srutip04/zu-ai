@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import CommanCard from "../common/CommonCard";
+import CommonCard from "../common/CommonCard";
 
-function PdfExpandCard({ data }) {
+function ExpandablePdfCard({ data }) {
   const [open, setOpen] = useState(true);
   const [isFullscreen, setIsFullscreen] = useState(false);
 
@@ -37,11 +37,11 @@ function PdfExpandCard({ data }) {
         className="sm:w-[282px] mb-4 flex sm:hidden"
         onClick={() => setOpen(!open)}
       >
-        <CommanCard>
+        <CommonCard>
           <span className="text-[#6947BF] text-base  font-extrabold">
             Expand & view your file →
           </span>
-        </CommanCard>
+        </CommonCard>
       </div>
     );
   }
@@ -53,7 +53,7 @@ function PdfExpandCard({ data }) {
           isFullscreen ? "fixed inset-0 z-50 h-full" : ""
         }`}
       >
-        <CommanCard
+        <CommonCard
           classes={`"hidden"${
             !open
               ? "hidden sm:flex bg-[#FFFFFF] rounded-3xl "
@@ -126,9 +126,9 @@ function PdfExpandCard({ data }) {
               )}
             </div>
           </div>
-        </CommanCard>
+        </CommonCard>
 
-        <CommanCard
+        <CommonCard
           classes={`mt-0 rounded-b-3xl   ${open && "bg-[#FFFFFF] "} ${
             isFullscreen ? "fixed inset-0 z-50 h-full" : ""
           }`}
@@ -194,10 +194,10 @@ function PdfExpandCard({ data }) {
               </div>
             </div>
           </div>
-        </CommanCard>
+        </CommonCard>
       </div>
     </>
   );
 }
 
-export default PdfExpandCard;
+export default ExpandablePdfCard;

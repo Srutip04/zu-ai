@@ -4,7 +4,7 @@ import CourseCard from "./CourseCard";
 import courseWorkStore from "@/store/courseWorkStore";
 import CourseCardSkeleton from "./CourseCardSkeleton";
 
-function ExploreCourseWork() {
+function CourseExplorer() {
   const [currentActive, setCurrentActive] = useState(0);
   let [coursedata, setcoursedata] = useState(null);
   const options = [
@@ -75,4 +75,4 @@ function ExploreCourseWork() {
   );
 }
 
-export default ExploreCourseWork;
+export default CourseExplorer;

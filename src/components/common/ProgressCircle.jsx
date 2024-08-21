@@ -2,7 +2,7 @@
 import React from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-function CircularProgress({ value = 13, classes, pathColor = "#3CC28A" }) {
+function ProgressCircle({ value = 13, classes, pathColor = "#3CC28A" }) {
   return (
     <div className={`${classes} font-bold `}>
       <CircularProgressbar
@@ -20,4 +20,4 @@ function CircularProgress({ value = 13, classes, pathColor = "#3CC28A" }) {
   );
 }
 
-export default CircularProgress;
+export default ProgressCircle;

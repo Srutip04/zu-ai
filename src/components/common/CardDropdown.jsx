@@ -1,8 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import CommanCard from "./CommonCard";
+import CommonCard from "./CommonCard";
 import FeedbackCard from "./feedbackCard";
-import CircularProgress from "./ProgressCircle";
+import ProgressCircle from "./ProgressCircle";
 
 function CardDropdown({ dataItem, criteria }) {
   const [open, setOpen] = useState(false);
@@ -13,13 +13,13 @@ function CardDropdown({ dataItem, criteria }) {
   const score = Math.ceil(dataItem?.score / 5) - 1;
 
   return (
-    <CommanCard>
+    <CommonCard>
       <div className=" w-full">
         <div
           className="flex gap-4 justify-around items-center cursor-pointer"
           onClick={() => setOpen(!open)}
         >
-          <CircularProgress
+          <ProgressCircle
             value={dataItem?.score}
             classes={"w-20 h-20 text-xl"}
             pathColor={scoreColor[score]}
@@ -61,7 +61,7 @@ function CardDropdown({ dataItem, criteria }) {
           <FeedbackCard type="bad" textData={dataItem?.bad} />
         </div>
       </div>
-    </CommanCard>
+    </CommonCard>
   );
 }
 

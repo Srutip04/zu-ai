@@ -11,7 +11,6 @@ function FeedbackCard({type,textData}) {
     return
   }
 
-// Extract the colors for border and background
 const borderColor = strength?.[type]?.[0];
 const backgroundColor = strength?.[type]?.[1];
 const imgtype=type=="good"? "tick":type=="average"?"info":"redcross"
